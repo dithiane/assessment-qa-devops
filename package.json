@@ -4,10 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
-    "start": "npm-run-all -p nodemon browser-sync",
-    "nodemon": "nodemon server.js",
-    "browser-sync": "browser-sync start --proxy localhost:4000 --files=**/*  --ignore=node_modules --reload-delay 10000 --no-ui"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
