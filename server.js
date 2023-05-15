@@ -70,7 +70,6 @@ app.get("/api/robots", (req, res) => {
 app.get("/api/robots/shuffled", (req, res) => {
   try {
     let shuffled = shuffle(bots);
-    console.log(shuffled)
     rollbar.info('GET ALL SHUFFLED ROBOTS')
     res.status(200).send(shuffled);
   } catch (error) {

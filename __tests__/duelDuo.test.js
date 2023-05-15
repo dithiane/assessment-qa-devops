@@ -4,7 +4,7 @@ let driver;
 
 beforeEach(async () => {
   driver = await new Builder().forBrowser(Browser.CHROME).build();
-  await driver.get("http://localhost:8000");
+  await driver.get("http://localhost:4000");
 });
 
 afterEach(async () => {
@@ -23,7 +23,7 @@ describe("Duel Duo tests", () => {
     await driver.wait(until.elementIsVisible(choices))
   });
 
-  test("Check if clicking an “Add to Duo” button displays the div with id = “player-duo”", async () => {
+  test("Check if clicking an “Add to Duo” button displays the div with id = “player-duo", async () => {
     await driver.findElement(By.xpath('//button[text()="Draw"]')).click()
     await driver.sleep(2000)
     await driver.findElement(By.xpath('//button[text()="Add to Duo"]')).click()
